@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Задаем стили css -->
+    <!-- href это ссылка, можно писать любой url, но во фласк есть метод url_for-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- c одной фигурной скобкой - для условия и выражений (циклы к примеру)-->
+    <!-- c двумя - для переменных-->
+    {% block title %}
+
+        <!-- Если title существует... -->
+        {% if title%}
+        <title>Flask - {{ title }}</title>
+        {% else %}
+        <title>Flask Blog</title>
+        {% endif %}
+
+    {% endblock title %}
+
+</head>
+<body>
+
+<!-- Обертка -->
+<div class="wrapper">
+<!-- Так как body у каждой страницы своя, а layout это общий файл, получается что в html файлах (к примеру index)
+каждой страницы будет прописано свое body. При этом body в layout.html будет переопределяться тем
+body, который находится в index.html, -//-.html ...-->
+{% block menu%}
+
+{% endblock menu %}
+
+
+{% block content %}
+
+{% endblock content %}
+
+
+{% block main_page %}
+
+{% endblock main_page %}
+
+
+{% block footer %}
+
+{% endblock footer %}
+</div>
+</body>
+</html>
