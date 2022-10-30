@@ -24,27 +24,45 @@
 
 <!-- Обертка -->
 <div class="wrapper">
-<!-- Так как body у каждой страницы своя, а layout это общий файл, получается что в html файлах (к примеру index)
-каждой страницы будет прописано свое body. При этом body в layout.html будет переопределяться тем
-body, который находится в index.html, -//-.html ...-->
-{% block menu%}
+    <!-- Так как body у каждой страницы своя, а layout это общий файл, получается что в html файлах (к примеру index)
+    каждой страницы будет прописано свое body. При этом body в layout.html будет переопределяться тем
+    body, который находится в index.html, -//-.html ...-->
+    {% block menu%}
+    <!-- Классы используются как ссылки на css файл, чтобы можно было явно указать на что ссылаться и куда добавлять стили -->
+    <header class="header">
 
-{% endblock menu %}
+        <ul class="main_menu">
+            <li><a href="#"><p>Главная</p></a></li>
+            <li><a href="#"><p>Блог</p></a></li>
+            <li><a href="#"><p>Регистрация</p></a></li>
+            <li><a href="#"><p>Логин</p></a></li>
+            <li><a href="#"><p>Аккаунт</p></a></li>
+            <li><a href="#"><p>Создать</p></a></li>
+            <li><a href="#"><p>Выход</p></a></li>
+        </ul>
+
+    </header>
+    {% endblock menu %}
 
 
-{% block content %}
-
-{% endblock content %}
+    {% block content %} {% endblock content %}
 
 
-{% block main_page %}
+    {% block main_page %}
 
-{% endblock main_page %}
+        <div class="content">
+
+        </div>
+
+    {% endblock main_page %}
 
 
-{% block footer %}
+    {% block footer %}
+        <footer class="footer">Все права защищены!<br>
+            &#169; Овсепян Эрик 2022
 
-{% endblock footer %}
+        </footer>
+    {% endblock footer %}
 </div>
 </body>
 </html>
