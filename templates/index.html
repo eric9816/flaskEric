@@ -1,6 +1,45 @@
 {% extends 'layout.html' %}
 
 
-{% block content %}
+{% block main_page %}
 
-{% endblock content %}
+<div class="wrapper">
+    <div class="empty_block"></div>
+    <div class="info">
+        <div class="description">
+            <p class="names"> Аниме мир </p>
+            <div class="desc">
+                <ul class="checkmark">
+                    <li><a href="{{ url_for('naruto_page') }}">Naruto</a></li>
+                    <li><a href="{{ url_for('bleach_page') }}">Bleach</a></li>
+                    <li><a href="{{ url_for('jojo_page') }}">JoJo</a></li>
+                    <li><a href="{{ url_for('onepunch_page') }}">OnePunchMan</a></li>
+                    <li><a href="{{ url_for('blackclover_page') }}">BlackClover</a></li>
+                    <li><a href="{{ url_for('mob_page') }}">MobPsycho100</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock main_page %}
+
+<!--<div class="wrapper">-->
+<!--    <div class="empty_block">-->
+<!--        <div class="info">-->
+<!--            <div class="description">-->
+<!--            <p class="names"> Эрик Эдуардович - Блог по аниме </p>-->
+<!--                <div class="desc">-->
+<!--                    <ul class="checkmark">-->
+<!--                        <a href="{{ url_for('naruto') }}"><li>Naruto</li></a>-->
+<!--                        <a href="{{ url_for('bleach') }}"><li>Bleach</li></a>-->
+<!--                        <a href="{{ url_for('jojo') }}"><li>JoJo</li></a>-->
+<!--                        <a href="{{ url_for('onepunchman') }}"><li>OnePunchMan</li></a>-->
+<!--                        <a href="{{ url_for('hunter_x_hunter') }}"><li>Hunter X Hunter</li></a>-->
+<!--                        <a href="{{ url_for('black_clover') }}"><li>Black Clover</li></a>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
